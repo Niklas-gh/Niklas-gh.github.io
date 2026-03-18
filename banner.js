@@ -22,7 +22,7 @@ function createBanner() {
   b.style.backgroundColor = "rgb(51, 51, 255)";
   b.style.color = "white";
   b.style.zIndex = "1000000";
-  b.innerText = "Sivu arkistoitu" + dateStr;
+  b.innerText = "Sivu arkistoitu " + dateStr;
   const html = document.querySelector("html");
   if (html) {
     html.style.marginTop = "30px";
