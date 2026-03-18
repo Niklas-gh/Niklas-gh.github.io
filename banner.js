@@ -9,7 +9,7 @@ function createBanner() {
   }
   let dateStr = "";
   if (self.__wbinfo && self.__wbinfo.timestamp) {
-    dateStr = " ajalta " + new Date(self.__wbinfo.timestamp).toLocaleString();
+    dateStr = new Date(self.__wbinfo.timestamp).toLocaleString();
   }
   const b = document.createElement("web-archive-banner");
   b.style.position = "fixed";
@@ -22,7 +22,7 @@ function createBanner() {
   b.style.backgroundColor = "rgb(51, 51, 255)";
   b.style.color = "white";
   b.style.zIndex = "1000000";
-  b.innerText = "Katselet tämän sivun arkistoitua versiota" + dateStr;
+  b.innerText = "Sivu arkistoitu" + dateStr;
   const html = document.querySelector("html");
   if (html) {
     html.style.marginTop = "30px";
